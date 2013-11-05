@@ -24,6 +24,12 @@ $wgExtensionMessagesFiles['ExtJs'] = $dir . 'ExtJs.i18n.php';
 
 $wgHooks['EditPage::showEditForm:initial'][] = 'ExtJs_Edit_Setup';
 
+/* 页面显示之前的玩意钩子 */
+//$wgHooks['BeforePageDisplay'][] = 'ExtJs_Edit_Setup';
+
+/* 这个钩子看起来是载入了全部扩展啥的 准备初始化的时候 */
+//$wgExtensionFunctions[] = 'ExtJs_Edit_Setup';
+
 $wgResourceModules['ext.ExtJs'] = array(
     //资源里的js
     'scripts' => array(
