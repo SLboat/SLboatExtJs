@@ -30,8 +30,9 @@ $wgResourceModules['ext.ExtJs'] = array(
         'js/jquery.textcomplete.js',
     ),
     //资源里的css
-    'style' => array(
-        'css/dropmenu.css',
+    'styles' => array(
+        'css/dropmenu.css', //下拉菜单的bootstrap缩微css
+        'css/fix_border.css', //修复边框的破碎
     ),
     //资源里的消息文本
     'messages' => array(
