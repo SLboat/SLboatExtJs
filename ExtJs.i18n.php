@@ -22,5 +22,5 @@ $messages['en'] = array(
  * @mod 森亮号大船
  */
 $messages['zh-hans'] = array(
-		'extjs-desc' = '一些额外js,css用于森亮号航海见识',     
+		'extjs-desc' => '一些额外js,css用于森亮号航海见识',   
 );

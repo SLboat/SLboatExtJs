@@ -36,7 +36,6 @@ $wgResourceModules['ext.ExtJs'] = array(
     //资源里的消息文本
     'messages' => array(
         'extjs-desc',
-
     ),
     //本地基础路径
     'localBasePath' => dirname(__FILE__),
@@ -47,6 +46,9 @@ $wgResourceModules['ext.ExtJs'] = array(
 
 function ExtJs_Edit_Setup()
 {
+    //召唤全局变量
+    global $wgOut; 
+
     //在页面输出的时候添加模块进去
     $wgOut->addModules('ext.ExtJs');
     
