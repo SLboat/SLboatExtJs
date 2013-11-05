@@ -25,11 +25,15 @@ $wgExtensionMessagesFiles['ExtJs'] = $dir . 'ExtJs.i18n.php';
 $wgHooks['EditPage::showEditForm:initial'][] = 'ExtJs_Edit_Setup';
 
 $wgResourceModules['ext.ExtJs'] = array(
-    // load the js module
+    //资源里的js
     'scripts' => array(
-        'js/inline-attach.js',
+        'js/jquery.textcomplete.js',
     ),
-    // 多语言消息文本咯
+    //资源里的css
+    'style' => array(
+        'css/dropmenu.css',
+    ),
+    //资源里的消息文本
     'messages' => array(
         'extjs-desc',
 
@@ -43,7 +47,7 @@ $wgResourceModules['ext.ExtJs'] = array(
 
 function ExtJs_Edit_Setup()
 {
-    //load module
+    //在页面输出的时候添加模块进去
     $wgOut->addModules('ext.ExtJs');
     
     return true;
