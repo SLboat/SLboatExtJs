@@ -22,7 +22,7 @@ $wgExtensionCredits['parserhook'][] = array(
 $dir = dirname(__FILE__) . '/';
 $wgExtensionMessagesFiles['ExtJs'] = $dir . 'ExtJs.i18n.php';
 
-$wgHooks['EditPage::showEditForm:initial'][] = 'ExtJsSetup';
+$wgHooks['EditPage::showEditForm:initial'][] = 'ExtJs_Edit_Setup';
 
 $wgResourceModules['ext.ExtJs'] = array(
     // load the js module
@@ -41,10 +41,10 @@ $wgResourceModules['ext.ExtJs'] = array(
 );
 
 
-function ExtJsSetup()
+function ExtJs_Edit_Setup()
 {
     //load module
-    $wgOut->addModules('ext.ExtJs'oad');
+    $wgOut->addModules('ext.ExtJs');
     
     return true;
 }
