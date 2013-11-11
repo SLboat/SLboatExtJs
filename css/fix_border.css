@@ -1,0 +1,6 @@
+/* 最终可能出现的问题是[wikiEditor-ui]的css被破坏了
+ * 这里试图的就是重建破坏的现场 */
+/* 修补对齐,这看起来才是问题所在 */
+.wikiEditor-ui .textcomplete-wrapper > textarea#wpTextbox1 {
+	margin: 0;
+}
