@@ -74,7 +74,8 @@ function ExtJs_Edit_Setup()
     
     //在页面输出的时候添加模块进去
     $wgOut->addModules('jquery.hotkeys');
-    $wgOut->addModules('jquery.textcomplete');
+    //是否开启自动完成,就在这里了
+    #$wgOut->addModules('jquery.textcomplete');
     
     return true;
   }
