@@ -8,6 +8,9 @@
  *
  * Original idea by:
  * Binny V A, http://www.openjs.com/scripts/events/keyboard_shortcuts/
+ * 
+ * THE SLboat Mod Source:
+ * https://github.com/SLboat/jquery.hotkeys/
 */
 
 (function(jQuery){
@@ -23,7 +26,11 @@
 			104: "8", 105: "9", 106: "*", 107: "+", 109: "-", 110: ".", 111 : "/", 
 			112: "f1", 113: "f2", 114: "f3", 115: "f4", 116: "f5", 117: "f6", 118: "f7", 119: "f8", 
 			120: "f9", 121: "f10", 122: "f11", 123: "f12", 144: "numlock", 145: "scroll", 191: "/", 224: "meta",
-			186: ";", 187: "=", 188: ",", 189:"-", 190: ".", 192: "`", 219: "[", 221: "]", 222: "'",  //SLboat added for this..
+			// fix problem with detect cmd key in webkit -> thx to destitutus 
+            // http://stackoverflow.com/questions/3902635/how-does-one-capture-a-macs-command-key-via-javascript
+            91: "meta", 93: "meta", 
+            // SLboat added for this.. more wried key go here:)
+			186: ";", 187: "=", 188: ",", 189:"-", 190: ".", 192: "`", 219: "[", 221: "]", 222: "'",
 		},
 	
 		shiftNums: {
@@ -87,6 +94,7 @@
 
 			for ( var i = 0, l = keys.length; i < l; i++ ) {
 				if ( possible[ keys[i] ] ) {
+					//最终匹配成功到了
 					return origHandler.apply( this, arguments );
 				}
 			}
